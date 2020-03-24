@@ -23,6 +23,8 @@ export default {
 
 body
   background: linear-gradient( to bottom right ,#60606c, #18171d )
+  background-repeat: no-repeat
+  background-size: cover
 
 #app
   display: flex

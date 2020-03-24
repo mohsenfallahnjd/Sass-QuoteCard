@@ -13,6 +13,12 @@
         </div>
         <p class="card--details__author"><span></span>{{ author }}</p>
       </div>
+      <p class="card--next"><span></span>next</p>
+      <div class="line">
+        <div></div>
+        <div></div>
+        <div class="end-line"></div>
+      </div>
     </article>
   </div>
 </template>
@@ -30,18 +36,29 @@ export default {
 
 <style lang="sass" scoped>
 @import url('https://fonts.googleapis.com/css?family=Fugaz+One|Lora|Roboto+Slab|Andada|Libre+Baskerville&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Andada&display=swap');
 
 .text-card
   display: flex
   justify-content: center
   position: relative
   height: 600px
-  width: 300px
-  border-radius: 0.1rem
+  width: 280px
+  border-radius: 0.2rem
   box-shadow: 0.4rem -0.3rem 0.8rem rgba(0, 0, 0, 0.3)
   overflow: hidden
-
+  .line
+    position: absolute
+    bottom: 10px
+    left: 8px
+    > div
+      box-shadow: 1.1px 1.1px 2px 1.1px rgba(0, 0, 0, 0.5)
+      height: 1.5px
+      width: 16px
+      background-color: #fafafa
+      margin-top: 2.2px
+      border-radius: 30px
+    .end-line
+      width: 10px
 .text
   display: flex
   width: 230px
@@ -59,7 +76,7 @@ export default {
     align-self: center
     text-rendering: optimizeLegibility
     padding-right: 20px
-    padding-bottom: 50px
+    padding-bottom: 80px
     &__title
       font-family: 'Lora', serif
       text-transform: uppercase
@@ -98,4 +115,23 @@ export default {
         top: 50%
         width: 8%
         z-index: -1
+
+.card--next
+    position: absolute
+    align-self: flex-end
+    padding-bottom: 10px
+    z-index: 1
+    font-family: 'Lora', serif
+    font-size: 10px
+    color: #fafafa
+    right: 8px
+    span
+      border-top: 1.5px solid #fafafa
+      content: ''
+      position: absolute
+      padding-bottom: 10px
+      left: -18px
+      top: 30%
+      width: 15px
+      z-index: -1
 </style>
